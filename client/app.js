@@ -6,6 +6,10 @@
 // other hand, images injected into the DOM are loaded at that
 // time, and if the loading fails, then the onerror event
 //handler is called.
+
+const API_URL = 'http://localhost:3000';
+const submitBtn = document.getElementById('submitHandler');
+
 const userInputInHTML = input => {
   const p = document.getElementById('pleaseNo');
   // Bad
@@ -15,14 +19,22 @@ const userInputInHTML = input => {
   // var textnode = document.createTextNode(input);
   // p.appendChild(textnode);
 };
-const sendToServer = () => {
+
+const sendToServer = async () => {
   const input = document.querySelector('#userinput').value;
   userInputInHTML(input);
-  fetch('http://localhost:3000/secret', {
-    method: 'POST',
-    body: JSON.stringify({ userInput: input }),
-    headers: new Headers({
-      'Content-Type': 'application/json',
-    }),
-  });
+
+  try {
+    return await fetch(`${API_URL}/secret`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ userInput: input }),
+    });
+  } catch (error) {
+    return { ok: false };
+  }
 };
+
+submitBtn.addEventListener('click', sendToServer);
