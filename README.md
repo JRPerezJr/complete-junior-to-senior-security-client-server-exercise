@@ -62,7 +62,31 @@ yarn dev
 npm run dev
 ```
 
-# Screenshots
+## 🖊 Usage/Examples
+
+To simulate an error, change the name of the returned object from `{userInput: input}` to `{userInput1: input}`
+
+```javascript
+const sendToServer = async () => {
+  const input = document.querySelector('#userinput').value;
+  userInputInHTML(input);
+
+  try {
+    return await fetch(`${API_URL}/secret`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // Change below
+      body: JSON.stringify({ userInput: input }),
+    });
+  } catch (error) {
+    return { ok: false };
+  }
+};
+```
+
+# 📺 Screenshots
 
 Client
 
