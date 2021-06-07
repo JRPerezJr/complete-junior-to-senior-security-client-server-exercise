@@ -64,7 +64,13 @@ npm run dev
 
 # Screenshots
 
-![App Screenshot](https://user-images.githubusercontent.com/19915910/121006786-4502cf80-c7cc-11eb-88fe-3b9cc1262845.png)
+Client
+
+![Client](https://user-images.githubusercontent.com/19915910/121006786-4502cf80-c7cc-11eb-88fe-3b9cc1262845.png)
+
+Backend
+
+![Backend](https://user-images.githubusercontent.com/19915910/121008291-ce66d180-c7cd-11eb-8a28-78dd9d81b951.png)
 
 ## 📓 Author
 
