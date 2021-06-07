@@ -1,10 +1,27 @@
 {
   "name": "security-client-server-exercise",
+  "private": true,
   "version": "1.0.0",
-  "description": "A learning exercise in client and server side security",
-  "main": "server.js",
-  "repository": "https://github.com/JRPerezJr/complete-junior-to-senior-security-client-server-exercise",
   "author": "Juan Perez Jr.",
   "license": "MIT",
-  "private": true
+  "description": "A learning exercise in client and server side security",
+  "engines": {
+    "node": "14.17.0",
+    "npm": "6.14.13"
+  },
+  "repository": "https://github.com/JRPerezJr/complete-junior-to-senior-security-client-server-exercise",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon main",
+    "start": "node main"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
