@@ -23,7 +23,7 @@
 
 ## 🖥 📱 💽 Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+**Client:** HTML, CSS
 
 **Server:** Node, Express
 
@@ -61,6 +61,10 @@ npm run start
 yarn dev
 npm run dev
 ```
+
+# Screenshots
+
+![App Screenshot](https://user-images.githubusercontent.com/19915910/121006786-4502cf80-c7cc-11eb-88fe-3b9cc1262845.png)
 
 ## 📓 Author
 
